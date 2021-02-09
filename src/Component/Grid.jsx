@@ -54,14 +54,12 @@ function Grid() {
         if (!tappedDOM.innerText) {
             tapCount++;
             if (tapCount % 2 !== 0) {
-                //odd
                 tappedDOM.innerText = "X";
                 setOdd(() => {
                     checkForWin("Player 1", [...odd, tapped], tapCount);
                     return [...odd, tapped];
                 });
             } else {
-                //even
                 tappedDOM.innerText = "O";
                 setEven(() => {
                     checkForWin("Player 2", [...even, tapped], tapCount);
